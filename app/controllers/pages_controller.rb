@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
     def index   
-        @name = "Ceta"
+        @car = Car.first
     end
 end
