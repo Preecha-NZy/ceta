@@ -1,29 +1,36 @@
-<section>
+<section class="p-8">
   <div class="rentals grid  gap-4 grid-cols-4">
     <% @cars.each do |car| %>
-      <div class="retal p-4 mb-8 bg-yellow-100 ">
-        <h2><%= car.short_info %></h2>
-        <h3>Type: <%= car.group %></h3>
-        <!-- car info -->
-        <div>
-          <div>900 บาท/วัน</div>
-          <div>for 1 day </div>
-        </div>
-        <!-- rental price-->
-        <div>
+      <div class="retal p-4 mb-8 bg-blue-100 rounded-lg shadow ">
+        <div class="flex flex-nowarp justify-between">
           <div>
-            <div>Pick-up:</div>
+            <h2 class="text-2xl text-blue-800"><%= car.short_info %></h2>
+            <h3 class="text-sm text-slate-400"><%= car.group %></h3>
+          </div>
+          <!-- car info -->
+          <div>
+            <div>
+              <span class="text-3xl text-blue-600">900 </span>
+              <span class="text-sm text-slate-600">บาท/วัน</span>
+            </div>
+            <div class="text-xs text-slate-400 text-right">for 1 day</div>
+          </div>
+          <!-- rental price-->
+        </div>
+        <div class="my-6 py-4 border-solid border-y-2 border-white">
+          <div>
+            <div class="text-xs text-slate-400">Pick-up:</div>
             <div>14 Mar 2022, 10:00</div>
           </div>
           <div>
-            <div>Drop - off:</div>
+            <div class="text-xs text-slate-400">Drop - off:</div>
             <div>15 Mar 2022, 10:00</div>
           </div>
         </div>
         <!-- rental period-->
-        <div>
-          <div>Supplier:</div>
-          <div><%= car.supplier.name %></div>
+        <div class="flex items-center">
+          <div class="text-xs text-slate-400 pr-2">By</div>
+          <div class="font-semibold text-sm text-slate-500"><%= car.supplier.name %></div>
         </div>
         <!-- company who own the rental car -->
       </div>
