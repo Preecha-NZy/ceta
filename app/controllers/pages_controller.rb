@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
     def index   
-        @car = Car.first
+        supplier = Supplier.last
+        @cars = supplier.cars
     end
 end
